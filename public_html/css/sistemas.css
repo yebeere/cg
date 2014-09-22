@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/09/2014, 18:31:00
+    Author     : daniel
+*/
+
+.no {
+    background-repeat:no-repeat;
+    background-image: url('../images/no.png');
+}
+.ok {
+    background-repeat:no-repeat;
+    background-image: url('../images/ok.png');
+}
+.estado {
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+}
+#content {
+    padding: 0;
+    position : absolute !important; 
+    top : 40px !important;  
+    right : 0; 
+    bottom : 40px !important;  
+    left : 0 !important;
+    background-image:url('../images/logo.png');
+}
