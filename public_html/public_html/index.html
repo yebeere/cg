@@ -43,13 +43,34 @@
                }    
         </script>
         <script>
-              function seleccion(){
+         function seleccion(){
                 var e = document.getElementById("select-choice-a");
-                var strUser = e.options[e.selectedIndex].value;
-                if (strUser=='Estaciones Meteorológicas') {strUser=0;}
-                document.getElementById('resultados').innerHTML ="<br />EMA:"+ema[strUser][0];
-                buscardatosHistoricos(ema[strUser][4]);
+                var emaSeleccionada = e.options[e.selectedIndex].value;
+                var tipoCultivo=getRadioValue('frutal');
+                var tipoRiego=getRadioValue('tipoRiego');
+                var epoca = document.getElementById("epoca").options[document.getElementById("epoca").selectedIndex].value;
+                var PC=document.getElementById("cobertura").value;
+                
+                if (emaSeleccionada==='Estaciones Meteorológicas') {emaSeleccionada=0;}
+                document.getElementById('resultados').innerHTML ="<br />EMA:"+ema[emaSeleccionada][0]+"<br />tipoCultivo:"+tipoCultivo+
+                       "<br />tipoRiego:"+tipoRiego+"<br />epoca:"+epoca +"<br />PC:"+PC  ;
+                buscardatosHistoricos(ema[emaSeleccionada][4]);
+                
             }
+            function getRadioValue(groupName) {
+                var _result;
+                try {
+                    var o_radio_group = document.getElementsByName(groupName);
+                    for (var a = 0; a < o_radio_group.length; a++) {
+                        if (o_radio_group[a].checked) {
+                            _result = o_radio_group[a].value;
+                            break;
+                        }
+                    }
+                } catch (e) { }
+                return _result;
+            }
+            
         </script>
         
         <title>CuentaGOTAS</title>
@@ -95,7 +116,7 @@
                             <label class="select ui-select" for="select-choice-a">Seleccione Estación:</label>
                             <div class="ui-select">
 
-                            <select id="select-choice-a" data-native-menu="false" name="select-choice-a" tabindex="-1">
+                            <select id="select-choice-a" data-native-menu="false" name="select-choice-a" tabindex="-1" data-mini="true">
                            <option>Estaciones Meteorológicas</option> 
                        <!-- <option value="1">Estación 1</option> -->
                             </select>
@@ -134,15 +155,15 @@
                                     <legend>Tipo de Riego:</legend>
 
                                     <input type="radio" name="tipoRiego" id="goteo" value="0.9" checked="checked" />
-                                    <label for="goteo">Riego por goteo</label>
+                                    <label for="goteo">Por goteo</label>
                                     <input type="radio" name="tipoRiego" id="micro" value="0.8" />
-                                    <label for="micro">Riego por Microaspersión</label>                                    
+                                    <label for="micro">Por Microaspersión</label>                                    
                         </fieldset>
                     </div>                      <!--        <input id="submitid" type="submit" value="Calculadora de Riego" data-theme="f"/> -->
                   </form>
                     <div id="resul"></div>
                     <div id="menu">
-                         <a data-icon="flat-checkround" data-theme="f" href="#second-page" data-role="button" onclick="seleccion()" >Calculadora de Riego</a>
+                         <a data-icon="flat-checkround" data-theme="b" href="#second-page" data-role="button" onclick="seleccion()" >Calculadora de Riego</a>
                    <!--     <a data-icon="flat-time" data-theme="f" href="#due-page"  data-role="button">Fake Btn</a>  -->
                   <!--  <fieldset class="ui-grid-a">
                             <div class="ui-block-a"> <a data-icon="flat-checkround" data-theme="e" href="#tips-page"  data-role="button">Fake Btn</a></div>
