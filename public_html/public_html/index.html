@@ -57,6 +57,13 @@
                 buscardatosHistoricos(ema[emaSeleccionada][4]);
                 
             }
+          function verDatosEMA(){
+                var e = document.getElementById("select-choice-a");
+                var emaSeleccionada = e.options[e.selectedIndex].value;
+                if (emaSeleccionada==='Estaciones Meteorológicas') {emaSeleccionada=0;}
+                buscardatosHistoricos(ema[emaSeleccionada][4]);
+                publicarDatosEMA();
+          }  
             function getRadioValue(groupName) {
                 var _result;
                 try {
@@ -120,6 +127,7 @@
                            <option>Estaciones Meteorológicas</option> 
                        <!-- <option value="1">Estación 1</option> -->
                             </select>
+                             <a href="#third-page" data-icon="info-black" data-theme="b" onclick="">Ver Datos<a>   
                             </div>
                     </div>
                     <div data-role="fieldcontain">
@@ -187,12 +195,21 @@
                     <p>Contenidode la segunda pagina</p>
                     <p>Volver a la pagina inicial, <a href="#home-page">Vuelta</a>
                     <div id="resultados">  </div>
-                    <div id="datosMeteo">  </div>
                 </div>
                 <div data-role="footer">
                     <h4>pie de segunda pagina</h4>
                 </div>
+            </div>
+            <!-- /tercer pagina  -->
+            <div data-role="page" id="third-page" data-title="Datos de la EMA">
+                <div data-role="header">
+                    <a href="#home-page" data-icon="back" data-theme="b">Inicio</a>
+                    <h1>Datos de la EMA</h1>
                 </div>
+                <div data-role="content" id="datosMeteo">
+                </div>
+                
+            </div>
             <div data-role="page" id="acerca" data-title="Grupo de desarrollo">
                 <div data-role="header">
                     <a href="#home-page" data-icon="back" data-theme="b">Inicio</a>
