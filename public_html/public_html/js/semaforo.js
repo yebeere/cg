@@ -93,9 +93,11 @@ function comparaFecha(dd,mm,aa,hh,min){
     
 
 
-function publicarDatosEMA(){
-        document.getElementById('datosMeteo').style.display = 'block';
-        document.getElementById('datosMeteo').innerHTML = 'Hora: '+hora+'<br>T: ' + temperatura +
+function publicarDatosEMA(emaSeleccionada){
+	  	document.getElementById('ema').innerHTML = ema[emaSeleccionada][0]
+		
+        document.getElementById('resultados').style.display = 'block';
+        document.getElementById('resultados').innerHTML = 'Hora: '+hora+'<br>T: ' + temperatura +
             'ºC <br/>H: ' + humedad + '%<br/>V: ' + viento + 'km/h<br/>pp: ' + lluvia + 'mm';
 
     return true;  

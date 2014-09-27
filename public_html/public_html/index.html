@@ -62,7 +62,7 @@
                 var emaSeleccionada = e.options[e.selectedIndex].value;
                 if (emaSeleccionada==='Estaciones Meteorológicas') {emaSeleccionada=0;}
                 buscardatosHistoricos(ema[emaSeleccionada][4]);
-                publicarDatosEMA();
+                publicarDatosEMA(emaSeleccionada);
           }  
             function getRadioValue(groupName) {
                 var _result;
@@ -127,13 +127,13 @@
                            <option>Estaciones Meteorológicas</option> 
                        <!-- <option value="1">Estación 1</option> -->
                             </select>
-                             <a href="#third-page" data-icon="info-black" data-theme="b" onclick="verDatosEMA();">Ver Datos<a>   
-                            </div>
+                                
+                             </div>
                     </div>
                     <div data-role="fieldcontain">
                         <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
                                     <legend>Frutales:</legend>
-                                    <input type="radio" name="frutal" id="radio-choice-c" value="0" checked="checked" />
+                                    <input type="radio" name="frutal" id="radio-choice-c" value="0" checked="checked" style="alignment-adjust:central" />
                                     <label for="radio-choice-c">Manzano</label>
                                     <input type="radio" name="frutal" id="radio-choice-d" value="1" />
                                     <label for="radio-choice-d">Peral</label>
@@ -171,30 +171,26 @@
                   </form>
                     <div id="resul"></div>
                     <div id="menu">
-                         <a data-icon="flat-checkround" data-theme="b" href="#second-page" data-role="button" onclick="seleccion()" >Calculadora de Riego</a>
-                   <!--     <a data-icon="flat-time" data-theme="f" href="#due-page"  data-role="button">Fake Btn</a>  -->
-                  <!--  <fieldset class="ui-grid-a">
-                            <div class="ui-block-a"> <a data-icon="flat-checkround" data-theme="e" href="#tips-page"  data-role="button">Fake Btn</a></div>
-                            <div class="ui-block-b"><a data-icon="ms-question" data-theme="g" href="#about-page"  data-role="button" >About</a></div>
-                        </fieldset>
-                  -->
+                         <a data-icon="flat-checkround" data-theme="d" href="#second-page" data-role="button" onclick="seleccion()" >Calculadora de Riego</a>
+                   
 
                     </div>
               </div>
              
             <div data-role="footer">
-                    <a href="#acerca" data-icon="check" data-theme="b">Acerca de</a>
+            		<a href="#third-page" data-icon="info" data-theme="b" data-role="button" data-mini="true" data-inline="true" onclick="verDatosEMA();">Datos EMA</a>
+                    <a href="#acerca" data-icon="check" data-theme="b" data-role="button" data-mini="true" data-inline="true" class="ui-btn-right">Acerca de</a>
                 </div>   
             </div><!-- /page  -->
             <!-- /Segunda pagina  -->
-            <div data-role="page" id="second-page" data-title="This is the second page">
+            <div data-role="page" id="second-page" data-title="Necesidad de Riego">
                 <div data-role="header">
-                    <h1>Second page</h1>
+                    <h3>Necesidad de Riego</h3>
                 </div>
                 <div data-role="content" id="main">
                     <p>Contenidode la segunda pagina</p>
                     <p>Volver a la pagina inicial, <a href="#home-page">Vuelta</a>
-                    <div id="resultados">  </div>
+                    
                 </div>
                 <div data-role="footer">
                     <h4>pie de segunda pagina</h4>
@@ -207,6 +203,8 @@
                     <h1>Datos de la EMA</h1>
                 </div>
                 <div data-role="content" id="datosMeteo">
+                <div id="ema"></div>
+                    <div id="resultados">  </div>
                 </div>
                 
             </div>
@@ -216,12 +214,14 @@
                     <h1>Acerca de CuentaGOTAS</h1>
                 </div>
                 <div data-role="content" id="main">
-                    <p>Diseño y programación:</p>
+                <div 
+                id="somos">
+                    <h3>Diseño y programación:</h3>
                     <p> - TSAW. Lorena Gonzalez</p>
                     <p> - TSAW. Daniel Toth</p>
-                    <p>Tutor:</p>
-                    <p> - Lic. Pablo Kogan</p>
-                    <div id="tres"></div>
+                    <h3>Tutor:</h3>
+                    <p> - Lic. Pablo Kogan</p></div>
+                    <div align="left" class="logo_unco" id="logo_unco" width="80" height="80"><img src="images/uncesp.jpg" width="80" height="80" alt="Uncomahue"></div><div id="logo_fai"><img src="images/fai.jpg" width="80" height="80" alt="Fai"></div>
                 </div>
             </div>
            

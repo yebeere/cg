@@ -22,3 +22,67 @@ and open the template in the editor.
     float: left;
     
 }
+#acerca #main #logo_unco {
+	width: 85px;
+	height: 85px;
+	margin-top: 2px;
+	margin-right: 2px;
+	margin-left: 2px;
+	margin-bottom: 2px;
+	float: left;
+	padding-left: 30px;
+}
+#acerca #main #logo_fai {
+	width: 85px;
+	height: 85px;
+	margin-top: 2px;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	margin-left: 2px;
+	float: right;
+	padding-right: 30px;
+}
+#acerca #main #somos {
+	background-image: url(file:///C|/wamp/www/phonegap/cg/public_html/public_html/images/logo.png);
+	background-repeat: no-repeat;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	background-size: 50px
+%;
+	background-position: 90% center;
+	background-size: 30% auto;
+}
+#third-page #datosMeteo #resultados {
+	border-top-color: #3279D9;
+	background-color: #6091CC;
+	font-weight: bold;
+	color: #9CF0E2;
+	margin-right: 10%;
+	margin-left: 10%;
+	padding-left: 20%;
+}
+#third-page #datosMeteo #ema {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-style: italic;
+	font-weight: bold;
+	border: thin solid #112997;
+	text-align: center;
+	margin-right: 10%;
+	margin-left: 10%;
+}
