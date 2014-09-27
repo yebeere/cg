@@ -52,7 +52,7 @@
                 var PC=document.getElementById("cobertura").value;
                 
                 if (emaSeleccionada==='Estaciones Meteorológicas') {emaSeleccionada=0;}
-                document.getElementById('resultados').innerHTML ="<br />EMA:"+ema[emaSeleccionada][0]+"<br />tipoCultivo:"+tipoCultivo+
+                document.getElementById('resulta2').innerHTML ="<br />EMA:"+ema[emaSeleccionada][0]+"<br />tipoCultivo:"+tipoCultivo+
                        "<br />tipoRiego:"+tipoRiego+"<br />epoca:"+epoca +"<br />PC:"+PC  ;
                 buscardatosHistoricos(ema[emaSeleccionada][4]);
                 
@@ -182,6 +182,7 @@
                     <a href="#acerca" data-icon="check" data-theme="b" data-role="button" data-mini="true" data-inline="true" class="ui-btn-right">Acerca de</a>
                 </div>   
             </div><!-- /page  -->
+<!-- ---------------------------------------------------------------------------------------------------   -->            
             <!-- /Segunda pagina  -->
             <div data-role="page" id="second-page" data-title="Necesidad de Riego">
                 <div data-role="header">
@@ -190,12 +191,13 @@
                 <div data-role="content" id="main">
                     <p>Contenidode la segunda pagina</p>
                     <p>Volver a la pagina inicial, <a href="#home-page">Vuelta</a>
-                    
+                    <div id="resulta2">  </div>
                 </div>
                 <div data-role="footer">
                     <h4>pie de segunda pagina</h4>
                 </div>
             </div>
+<!-- ---------------------------------------------------------------------------------------------------   -->                        
             <!-- /tercer pagina  -->
             <div data-role="page" id="third-page" data-title="Datos de la EMA">
                 <div data-role="header">
@@ -208,6 +210,7 @@
                 </div>
                 
             </div>
+<!-- ---------------------------------------------------------------------------------------------------   -->                        
             <div data-role="page" id="acerca" data-title="Grupo de desarrollo">
                 <div data-role="header">
                     <a href="#home-page" data-icon="back" data-theme="b">Inicio</a>
@@ -224,7 +227,7 @@
                     <div align="left" class="logo_unco" id="logo_unco" width="80" height="80"><img src="images/uncesp.jpg" width="80" height="80" alt="Uncomahue"></div><div id="logo_fai"><img src="images/fai.jpg" width="80" height="80" alt="Fai"></div>
                 </div>
             </div>
-           
+  <!-- ---------------------------------------------------------------------------------------------------   -->                     
         </div>
 
         <script type="text/javascript">
