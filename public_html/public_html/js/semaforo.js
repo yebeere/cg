@@ -14,7 +14,7 @@ var mes;
 var anio;
 var ho;
 var mi;
-
+var mediaEva;
 
 
 function llamar(url) {
@@ -83,11 +83,11 @@ function comparaFecha(dd,mm,aa,hh,min){
     var diferencia= fechaActual.getTime() - fechaFin.getTime();
     var difHoras = Math.floor(diferencia / (1000 * 60 * 60 )); 
     var texto="FA:"+fechaActual+'\nFF:'+fechaFin+'\nDif:'+difHoras;
-    alert (texto);
+    //alert (texto);
     if(difHoras<3){ 
-                  alert("paso >3");
+                  //alert("paso >3");
                   return true;                 
-         } else { alert("La EMA esta Fuera de Servicio");
+         } else { alert("La Estación Meteorológica Automática esta Fuera de Servicio");
                  return false;}
       }
     
@@ -97,12 +97,25 @@ function publicarDatosEMA(emaSeleccionada){
 	document.getElementById('ema').innerHTML = ema[emaSeleccionada][0]
         document.getElementById('resultados').style.display = 'block';
         document.getElementById('resultados').innerHTML = 'Hora: '+hora+'<br>Temp.: ' + temperatura +
-            'ºC <br/>Humed: ' + humedad + '%<br/>Viento: ' + viento + 'km/h<br/>Viento: ' + lluvia + 'mm';
+            'ºC <br/>Humed: ' + humedad + '%<br/>Viento: ' + viento + 'km/h<br/> Lluvia: ' + lluvia + 'mm<br/>Media Evap:'+mediaEva;
     return true;  
+}
+function mediaEvapo24hs(filas,nroFilas){
+    alert("NroFila:"+nroFilas);
+   if (nroFilas>144){
+       var media=0;
+       for (i=nroFilas;i>nroFilas-144;i--){
+           ultima=parserHistoricolinea(filas, i);
+           media=media+ultima[14];
+       }
+       alert("I:"+i+"  media:"+media);
+       media=media/144;
+       return media;
+   } 
 }
 
 
-function parserHistoricolinea(filas, numero) {
+function parserHistoricolinea(filas, numero) { //Rotorna la linea parseada en un arreglo
     ultimaconblancos = filas[numero].split(' ');
     //console.log(ultimaconblancos);
     //console.log(ultimaconblancos.length);
@@ -122,12 +135,13 @@ function parserHistorico(contenido) {
     //console.log(filas);
     //console.log(filas.length);
     
-    alert("long:"+filas.length);
+   // alert("long:"+filas.length);
     if(filas.length<25){
         return true;
     }
     numerofila = filas.length - 2;
     ultima = parserHistoricolinea(filas, numerofila);
+    mediaEva=mediaEvapo24hs(filas,numerofila);
     fecha=ultima[0];
     dia=parseInt(fecha.substr(0, 2),10);
     mes=parseInt(fecha.substr(3, 2),10);
