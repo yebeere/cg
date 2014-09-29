@@ -94,12 +94,10 @@ function comparaFecha(dd,mm,aa,hh,min){
 
 
 function publicarDatosEMA(emaSeleccionada){
-	  	document.getElementById('ema').innerHTML = ema[emaSeleccionada][0]
-		
+	document.getElementById('ema').innerHTML = ema[emaSeleccionada][0]
         document.getElementById('resultados').style.display = 'block';
-        document.getElementById('resultados').innerHTML = 'Hora: '+hora+'<br>T: ' + temperatura +
-            'ºC <br/>H: ' + humedad + '%<br/>V: ' + viento + 'km/h<br/>pp: ' + lluvia + 'mm';
-
+        document.getElementById('resultados').innerHTML = 'Hora: '+hora+'<br>Temp.: ' + temperatura +
+            'ºC <br/>Humed: ' + humedad + '%<br/>Viento: ' + viento + 'km/h<br/>Viento: ' + lluvia + 'mm';
     return true;  
 }
 
@@ -112,7 +110,6 @@ function parserHistoricolinea(filas, numero) {
     for (i = 0; i < ultimaconblancos.length; i++) {
         //console.log(ultimaconblancos[i]);
         if (ultimaconblancos[i] !=='') {
-
             ultima.push(ultimaconblancos[i]);
         }
     }
@@ -124,6 +121,8 @@ function parserHistorico(contenido) {
     filas = contenido.split('\n');
     //console.log(filas);
     //console.log(filas.length);
+    
+    alert("long:"+filas.length);
     if(filas.length<25){
         return true;
     }
