@@ -101,12 +101,15 @@ function publicarDatosEMA(emaSeleccionada){
     return true;  
 }
 function mediaEvapo24hs(filas,nroFilas){
-    alert("NroFila:"+nroFilas);
+  //  alert("NroFila:"+nroFilas);
    if (nroFilas>144){
        var media=0;
-       for (i=nroFilas;i>nroFilas-144;i--){
+       var inicio=nroFilas-144;
+       alert ("Inicio="+inicio);
+       for (i=inicio;i<nroFilas;i++){
            ultima=parserHistoricolinea(filas, i);
            media=media+ultima[14];
+           alert("Ult="+ultima[14]+"\n media:"+media);
        }
        alert("I:"+i+"  media:"+media);
        media=media/144;
