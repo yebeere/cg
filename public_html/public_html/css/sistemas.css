@@ -39,8 +39,8 @@ and open the template in the editor.
 	margin-right: 2px;
 	margin-bottom: 2px;
 	margin-left: 2px;
-	float: right;
-	padding-right: 30px;
+	float: left;
+	text-align: center;
 }
 #acerca #main #somos {
 	background-image: url(file:///C|/wamp/www/phonegap/cg/public_html/public_html/images/logo.png);
@@ -63,10 +63,59 @@ and open the template in the editor.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	background-size: 50px
 %;
-	background-position: 90% center;
-	background-size: 30% auto;
+	background-position: 90%
+%;
+	background-size: 100px auto;
+	background-attachment: fixed;
+	background-origin: border-box;
+
+
+
+
+
+
+
+
+
+
+
+
+	background-position: 80%
+%;
+	background-position: 91%
+% 30%;
+	position: relative;
+	background-position: 91% 35%;
+	left: 15%;
 }
 #third-page #datosMeteo #resultados {
 	border-top-color: #3279D9;
@@ -85,4 +134,18 @@ and open the template in the editor.
 	text-align: center;
 	margin-right: 10%;
 	margin-left: 10%;
+}
+#main #logo_fai img {
+	float: left;
+
+}
+#acerca #main #logos {
+	margin: auto;
+	position: relative;
+	width: 300px;
+	min-width: 300px;
+	text-align: center;
+	display: block;
+
+
 }
