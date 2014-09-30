@@ -106,12 +106,12 @@ function mediaEvapo24hs(filas,nroFilas){
        var media=0;
        var inicio=nroFilas-144;
        alert ("Inicio="+inicio);
-       for (i=inicio;i<nroFilas;i++){
-           ultima=parserHistoricolinea(filas, i);
-           media=parseFloat(media+parseFloat(ultima[14]));
-           alert("i:"+i+" Ult="+ultima[14]+"\n media:"+media);
+       for (var j=inicio;j<nroFilas;j++){
+           ultima=parserHistoricolinea(filas, j);
+           media=parseFloat(media+parseFloat(ultima[6]));
+           alert("i:"+j+" Ult="+ultima[6]+"\n media:"+media);
        }
-       alert("I:"+i+"  media:"+media);
+       alert("I:"+j+"  media:"+media);
        media=media/144;
        return media;
    } 
