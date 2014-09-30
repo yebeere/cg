@@ -43,8 +43,8 @@ and open the template in the editor.
 	text-align: center;
 }
 #acerca #main #somos {
-	background-image: url(file:///C|/wamp/www/phonegap/cg/public_html/public_html/images/logo.png);
 	background-repeat: no-repeat;
+
 
 
 
@@ -109,6 +109,7 @@ and open the template in the editor.
 
 
 
+
 	background-position: 80%
 %;
 	background-position: 91%
@@ -148,4 +149,13 @@ and open the template in the editor.
 	display: block;
 
 
+}
+#home-page div table {
+	position: relative;
+	text-align: center;
+	margin: auto;
+	display: block;
+}
+table tr td {
+	font-weight: bold;
 }
