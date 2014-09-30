@@ -104,7 +104,7 @@ function mediaEvapo24hs(filas,nroFilas){
   //  alert("NroFila:"+nroFilas);
    if (nroFilas>144){
        var media=0;
-       var inicio=nroFilas-144;
+       var inicio=nroFilas-144+1;
        //alert ("Inicio="+inicio);
        for (var j=inicio;j<(nroFilas+1);j++){
            ultima=parserHistoricolinea(filas, j);
@@ -116,7 +116,7 @@ function mediaEvapo24hs(filas,nroFilas){
        }
        
        media=media/144;
-       var cant=j-inicio+1;
+       var cant=j-inicio;
        alert("j:"+cant+"  media:"+media);
        return media;
    } 
