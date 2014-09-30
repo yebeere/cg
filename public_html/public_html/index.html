@@ -30,6 +30,7 @@
                 document.addEventListener("deviceready", onDeviceReady, false);
                 function onDeviceReady() {
                    // Register the event listener
+                   window.plugins.insomnia.keepAwake();
                    document.addEventListener("offline", isOffline(), false);
                    document.addEventListener("online", isOnline(), false);
                    //navigator.geolocation.getCurrentPosition(onSuccessGPS, onErrorGPS);

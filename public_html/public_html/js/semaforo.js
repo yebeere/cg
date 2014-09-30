@@ -108,8 +108,8 @@ function mediaEvapo24hs(filas,nroFilas){
        //alert ("Inicio="+inicio);
        for (var j=inicio;j<(nroFilas+1);j++){
            ultima=parserHistoricolinea(filas, j);
-           if (j==inicio){alert("Inicio:"+ultima[0]+"  "+ultima[1])}
-           if (j==nroFilas){alert("Final:"+ultima[0]+"  "+ultima[1])}
+           //if (j==inicio){alert("Inicio:"+ultima[0]+"  "+ultima[1])}
+           //if (j==nroFilas){alert("Final:"+ultima[0]+"  "+ultima[1])}
            media=parseFloat(media+parseFloat(ultima[6]));
            
          //  alert("i:"+j+" Ult="+ultima[6]+"\n media:"+media);
@@ -117,7 +117,7 @@ function mediaEvapo24hs(filas,nroFilas){
        
        media=media/144;
        var cant=j-inicio;
-       alert("j:"+cant+"  media:"+media);
+       //alert("j:"+cant+"  media:"+media);
        return media;
    } 
 }
