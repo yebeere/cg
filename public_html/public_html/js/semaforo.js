@@ -118,7 +118,6 @@ function mediaEvapo24hs(filas,nroFilas){
        }
        
        media=media/144;
-       var cant=j-inicio;
        //alert("j:"+cant+"  media:"+media);
        return media;
    } 
@@ -153,7 +152,7 @@ function parserHistorico(contenido) {
     ultima = parserHistoricolinea(filas, numerofila);
     mediaEva=mediaEvapo24hs(filas,numerofila);
     fecha=ultima[0];
-    if (length(fecha)===7){ 
+    if (fecha.length===7){ 
                 dia=parseInt(fecha.substr(0, 1),10);
                 mes=parseInt(fecha.substr(2, 2),10);
                 anio=parseInt(fecha.substr(5, 2),10);
