@@ -156,6 +156,7 @@ function parserHistorico(contenido) {
     dia=parseInt(fecha.substr(0, 2),10);
     mes=parseInt(fecha.substr(3, 2),10);
     anio=parseInt(fecha.substr(6, 2),10);
+    alert ("d="+dia+" m="+mes+" ano="+anio);
     hora=ultima[1];
     ho=parseInt(hora.substr(0, 2),10);
     mi=parseInt(hora.substr(3, 2),10);
