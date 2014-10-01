@@ -83,7 +83,7 @@ function comparaFecha(dd,mm,aa,hh,min){
     var diferencia= fechaActual.getTime() - fechaFin.getTime();
     var difHoras = Math.floor(diferencia / (1000 * 60 * 60 )); 
     var texto="FA:"+fechaActual+'\nFF:'+fechaFin+'\nDif:'+difHoras;
-    //alert (texto);
+    alert (texto);
     if(difHoras<3){ 
                   //alert("paso >3");
                   return true;                 
