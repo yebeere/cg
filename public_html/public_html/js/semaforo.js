@@ -153,10 +153,11 @@ function parserHistorico(contenido) {
     ultima = parserHistoricolinea(filas, numerofila);
     mediaEva=mediaEvapo24hs(filas,numerofila);
     fecha=ultima[0];
+    alert(fecha);
     dia=parseInt(fecha.substr(0, 2),10);
     mes=parseInt(fecha.substr(3, 2),10);
     anio=parseInt(fecha.substr(6, 2),10);
-    alert ("d="+dia+" m="+mes+" ano="+anio);
+    alert("d="+dia+" m="+mes+" ano="+anio);
     hora=ultima[1];
     ho=parseInt(hora.substr(0, 2),10);
     mi=parseInt(hora.substr(3, 2),10);
