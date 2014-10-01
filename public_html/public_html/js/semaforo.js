@@ -67,6 +67,7 @@ function buscardatosHistoricos(ema) {
     //http://anterior.inta.gov.ar/altovalle/met/downld02.txt
     //parserHistorico(llamar('http://anterior.inta.gov.ar/altovalle/met/downld02.txt'));
     parserHistorico(llamar(ema));
+    alert('Dia='+dia+' mes='+mes+' anio='+anio+' hora='+hora+' min='+mi);
     comparaFecha(dia,mes,anio,ho,mi);
     
 
@@ -104,10 +105,10 @@ function mediaEvapo24hs(filas,nroFilas){
   //  alert("NroFila:"+nroFilas);
    if (nroFilas>144){
        var media=0;
-       var inicio=nroFilas-144+1;
+       //var inicio=nroFilas-144+1;
        //alert ("Inicio="+inicio);
-       for (var j=inicio;j<(nroFilas+1);j++){
-           ultima=parserHistoricolinea(filas, j);
+       for (var j=0;j<144;j++){
+           ultima=parserHistoricolinea(filas, nroFilas-j);
            //if (j==inicio){alert("Inicio:"+ultima[0]+"  "+ultima[1])}
            //if (j==nroFilas){alert("Final:"+ultima[0]+"  "+ultima[1])}
            media=parseFloat(media+parseFloat(ultima[6]));
