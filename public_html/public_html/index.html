@@ -11,19 +11,8 @@
                 <script src="libs/jquery-2.0.3.min.js" type="text/javascript"></script>
                 <script src="libs/jQueryMobile/jquery.mobile-1.4.4.min.js" type="text/javascript"></script>
         
-        <script type="text/javascript" charset="utf-8" src="libs/cordova.js"></script>
-     <!--   <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>  -->
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script> 
         <link href="css/sistemas.css" rel="stylesheet" type="text/css"/>
-        <style type="text/css">
-        #logo_inta {
-	background-attachment: fixed;
-	background-image: url(images/logo_inta.png);
-	background-repeat: no-repeat;
-	width: 85px;
-	height: 92px;
-	float: left;
-}
-        </style>
         <script src="js/semaforo.js" type="text/javascript"></script>
         <script src="js/geo.js" type="text/javascript"></script>
         <script type="text/javascript">
@@ -63,8 +52,11 @@
                 var PC=document.getElementById("cobertura").value;
                 
                 if (emaSeleccionada==='Estaciones Meteorológicas') {emaSeleccionada=0;}
-                document.getElementById('resulta2').innerHTML ="<br />EMA:"+ema[emaSeleccionada][0]+"<br />tipoCultivo:"+tipoCultivo+
-                       "<br />tipoRiego:"+tipoRiego+"<br />epoca:"+epoca +"<br />PC:"+PC  ;
+                document.getElementById('estacionAuto').innerHTML = ema[emaSeleccionada][0];
+                document.getElementById('tipoFrutal').innerHTML = culti[tipoCultivo];
+                document.getElementById('estadoCultivo').innerHTML =  epoc[epoca];
+                document.getElementById('porcentajeCob').innerHTML =kr[PC] ; 
+                document.getElementById('tipoRiego').innerHTML = triego[tipoRiego];
                 buscardatosHistoricos(ema[emaSeleccionada][4]);
                 
             }
@@ -197,11 +189,15 @@
             <!-- /Segunda pagina  -->
             <div data-role="page" id="second-page" data-title="Necesidad de Riego">
                 <div data-role="header">
+                	<a href="#home-page" data-icon="back" data-theme="b">Inicio</a>
                     <h3>Necesidad de Riego</h3>
                 </div>
                 <div data-role="content" id="main">
-                    <p>Contenidode la segunda pagina</p>
-                    <p>Volver a la pagina inicial, <a href="#home-page">Vuelta</a>
+                    <span id="estacionAuto">1</span>
+                    <span id="tipoFrutal">2</span>
+                    <span id="estadoCultivo">3</span>
+                    <span id="porcentajeCob">4</span>
+                    <span id="tipoRiego">5</span>
                     <div id="resulta2">  </div>
                 </div>
                 <div data-role="footer">
