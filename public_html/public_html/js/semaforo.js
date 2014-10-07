@@ -65,10 +65,10 @@ function parser(contenido) {
 
 function buscardatosHistoricos(ema) {
     //http://anterior.inta.gov.ar/altovalle/met/downld02.txt
-    //parserHistorico(llamar('http://anterior.inta.gov.ar/altovalle/met/downld02.txt'));
+    //parseHistorico(llamar('http://anterior.inta.gov.ar/altovalle/met/downld02.txt'));
     parserHistorico(llamar(ema));
-    var texto="d="+dia+" m="+mes+" a="+anio+" h="+ho+" mi="+mi;
-    alert(texto);
+    //var texto="d="+dia+" m="+mes+" a="+anio+" h="+ho+" mi="+mi;
+   //S alert(texto);
     comparaFecha(dia,mes,anio,ho,mi);
     
 
@@ -85,23 +85,15 @@ function comparaFecha(dd,mm,aa,hh,min){
     var diferencia= fechaActual.getTime() - fechaFin.getTime();
     var difHoras = Math.floor(diferencia / (1000 * 60 * 60 )); 
     var texto="FA:"+fechaActual+'\nFF:'+fechaFin+'\nDif:'+difHoras;
-    alert (texto);
+   // alert (texto);
     if(difHoras<3){ 
                   //alert("paso >3");
                   return true;                 
          } else { alert("La Estación Meteorológica Automática esta Fuera de Servicio");
                  return false;}
       }
-    
 
 
-function publicarDatosEMA(emaSeleccionada){
-	document.getElementById('ema').innerHTML = ema[emaSeleccionada][0]
-        document.getElementById('resultados').style.display = 'block';
-        document.getElementById('resultados').innerHTML = 'Hora: '+hora+'<br>Temp.: ' + temperatura +
-            'ºC <br/>Humed: ' + humedad + '%<br/>Viento: ' + viento + 'km/h<br/> Lluvia: ' + lluvia + 'mm<br/>Media Evap:'+mediaEva;
-    return true;  
-}
 function mediaEvapo24hs(filas,nroFilas){
   //  alert("NroFila:"+nroFilas);
    if (nroFilas>144){
@@ -161,7 +153,7 @@ function parserHistorico(contenido) {
                 mes=parseInt(fecha.substr(3, 2),10);
                 anio=parseInt(fecha.substr(6, 2),10);
        } 
-    alert("d="+dia+" m="+mes+" ano="+anio);
+   // alert("d="+dia+" m="+mes+" ano="+anio);
     hora=ultima[1];
     ho=parseInt(hora.substr(0, 2),10);
     mi=parseInt(hora.substr(3, 2),10);
