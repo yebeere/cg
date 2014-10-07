@@ -87,7 +87,7 @@ function comparaFecha(dd,mm,aa,hh,min){
     var difHoras = Math.floor(diferencia / (1000 * 60 * 60 )); 
     var texto="FA:"+fechaActual+'\nFF:'+fechaFin+'\nDif:'+difHoras;
    // alert (texto);
-    if(difHoras<3){ 
+    if(difHoras<4){ 
                   //alert("paso >3");
                   return true;                 
          } else { alert("La Estación Meteorológica Automática esta Fuera de Servicio");

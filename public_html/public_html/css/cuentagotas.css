@@ -10,7 +10,6 @@ root {
     display: block;
 }
 
-
 .weather-info-value   {
 	color: #080CC7;
 	font-style: normal;
@@ -75,10 +74,17 @@ root {
 	text-align: center;
 	background-color: #52C3D5;
 }
+.weather-evap {
+	display: block;
+	float: left;
+	width: 100%;
+	text-align: center;
+	background-color: #52C3D5;
+}
 .weather-content {
 	display: block;
 	text-align: center;
-	width: 200px;
+	width: 250px;
 	background-color: #ABE2EB;
 	left: 20%;
 	position: relative;
@@ -92,7 +98,7 @@ root {
 	font-size: small;
 }
 .weather-content .weather-information-mas {
-	width: 200px;
+	width: 250px;
 	background-color: #ABE2EB;
 }
 .weather-humidity .weather-info-type {
