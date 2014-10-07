@@ -6,6 +6,7 @@
 var humedad;
 var temperatura;
 var viento;
+var presion;
 var lluvia;
 var fecha;
 var hora;
@@ -160,8 +161,8 @@ function parserHistorico(contenido) {
     temperatura = parseFloat(ultima[2]);
     humedad = parseFloat(ultima[5]);
     viento = parseFloat(ultima[10]);
+    presion = parseFloat(ultima[16]);
     lluvia = parseFloat(ultima[17])*100;
-
     for (j = 1; j < 18; j++) {
         ultima = parserHistoricolinea(filas, numerofila - j);
         //console.log(ultima[17]);
