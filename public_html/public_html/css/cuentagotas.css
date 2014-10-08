@@ -9,7 +9,6 @@
 root { 
     display: block;
 }
-
 .weather-info-value   {
 	color: #080CC7;
 	font-style: normal;
@@ -86,9 +85,9 @@ root {
 	text-align: center;
 	width: 250px;
 	background-color: #ABE2EB;
-	left: 12%;
-	position: relative;
+	position: static;
 	background-origin: content-box;
+	margin: 0 auto;
 	background-repeat: repeat;
 }
 .weather-content .date {
