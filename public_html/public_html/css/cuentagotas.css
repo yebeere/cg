@@ -130,8 +130,5 @@ root {
 	vertical-align: middle;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	background-image: -webkit-linear-gradient(168deg,rgba(22,120,191,1.00) 0%,rgba(6,36,215,1.00) 52.33%,rgba(9,9,9,1.00) 96.89%,rgba(7,7,7,1.00) 96.89%);
-	background-image: -moz-linear-gradient(168deg,rgba(22,120,191,1.00) 0%,rgba(6,36,215,1.00) 52.33%,rgba(9,9,9,1.00) 96.89%,rgba(7,7,7,1.00) 96.89%);
-	background-image: -o-linear-gradient(168deg,rgba(22,120,191,1.00) 0%,rgba(6,36,215,1.00) 52.33%,rgba(9,9,9,1.00) 96.89%,rgba(7,7,7,1.00) 96.89%);
-	background-image: linear-gradient(282deg,rgba(22,120,191,1.00) 0%,rgba(6,36,215,1.00) 52.33%,rgba(9,9,9,1.00) 96.89%,rgba(7,7,7,1.00) 96.89%);
+	background-color: #000000;
 }
