@@ -141,11 +141,14 @@ tbody tr .impar {
 	background-color: #BEECF7;
 	height: 10px;
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
-	border-top: thin solid #0C1FF1;
+	border-top-style: none;
 }
 tbody tr .par {
 	height: 20px;
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 	padding-top: 5px;
 	text-align: right;
+	font-weight: bold;
+	color: #0A0FF4;
 }
+
