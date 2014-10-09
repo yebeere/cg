@@ -27,29 +27,25 @@
                    document.addEventListener("online", isOnline(), false);   //En red
                    //navigator.geolocation.getCurrentPosition(onSuccessGPS, onErrorGPS);
                     //buscardatosHistoricos();
+                   document.addEventListener("backbutton", function(e){
+                            if($.mobile.activePage.is('#homepage')){
+                                e.preventDefault();
+                                navigator.app.exitApp();
+                            }
+                            else {
+                                navigator.app.backHistory()
+                            }
+                        }, false);
+
                   }
               
         </script>
-        <script language="javascript">
 
-            function showConfirm() {
-                  navigator.notification.confirm(
-                     '¿Seguro que quieres cerrar la aplicación?', // mensaje a mostrar
-                     exitFromApp, // callback a invocar cuando el botón es presionado
-                     'Salir', // titulo de la ventana
-                     'Cancelar,Si' // etiquetas de los botones
-                  );
-            }
-
-            function exitFromApp(buttonIndex) {
-                   if (buttonIndex==2){ navigator.app.exitApp();}
-            }
-       </script>
         <title>CuentaGOTAS</title>
     </head>
     <body>
         <div id="app">
-            <div id="home-page" data-role="page" >
+            <div id="homepage" data-role="page" >
                 <div data-role="header">
                         <h1>CuentaGOTAS</h1>
                 </div>
@@ -144,7 +140,6 @@
              
             <div data-role="footer">
             		<a href="#third-page" data-icon="info" data-theme="b" data-role="button" data-mini="true" data-inline="true" onclick="verDatosEMA();">Datos EMA</a>
-                        <a data-theme="b" data-role="button" data-mini="true" data-inline="true"  onclick="showConfirm(); return false;" href="#" >salir</a>
                     <a href="#acerca" data-icon="check" data-theme="b" data-role="button" data-mini="true" data-inline="true" class="ui-btn-right">Acerca de</a>
                 </div>   
             </div><!-- /page  -->
@@ -152,7 +147,7 @@
             <!-- /Segunda pagina  -->
             <div data-role="page" id="second-page" data-title="Necesidad de Riego">
                 <div data-role="header">
-                	<a href="#home-page" data-icon="back" data-theme="b">Inicio</a>
+                	<a href="#homepage" data-icon="back" data-theme="b">Inicio</a>
                     <h3>Riego</h3>
                 </div>
                 <div data-role="content" id="riego">
@@ -214,7 +209,7 @@
             <!-- /tercer pagina  -->
             <div data-role="page" id="third-page" data-title="Datos de la EMA">
                 <div data-role="header">
-                    <a href="#home-page" data-icon="back" data-theme="b">Inicio</a>
+                    <a href="#homepage" data-icon="back" data-theme="b">Inicio</a>
                     <h1>Datos de la EMA</h1>
                 </div>
                 <div data-role="content" id="datosMeteo">
@@ -272,7 +267,7 @@
 <!-- ---------------------------------------------------------------------------------------------------   -->                        
             <div data-role="page" id="acerca" data-title="Grupo de desarrollo">
                 <div data-role="header">
-                    <a href="#home-page" data-icon="back" data-theme="b">Inicio</a>
+                    <a href="#homepage" data-icon="back" data-theme="b">Inicio</a>
                     <h1>Acerca de CuentaGOTAS</h1>
                 </div>
                 <div data-role="content" id="main">
