@@ -30,7 +30,21 @@
                   }
               
         </script>
-        
+        <script language="javascript">
+
+            function showConfirm() {
+                  navigator.notification.confirm(
+                     '¿Seguro que quieres cerrar la aplicación?', // mensaje a mostrar
+                     exitFromApp, // callback a invocar cuando el botón es presionado
+                     'Salir', // titulo de la ventana
+                     'Cancelar,Si' // etiquetas de los botones
+                  );
+            }
+
+            function exitFromApp(buttonIndex) {
+                   if (buttonIndex==2){ navigator.app.exitApp();}
+            }
+       </script>
         <title>CuentaGOTAS</title>
     </head>
     <body>
@@ -130,6 +144,7 @@
              
             <div data-role="footer">
             		<a href="#third-page" data-icon="info" data-theme="b" data-role="button" data-mini="true" data-inline="true" onclick="verDatosEMA();">Datos EMA</a>
+                        <a data-theme="b" data-role="button" data-mini="true" data-inline="true"  onclick="showConfirm(); return false;" href="#" >salir</a>
                     <a href="#acerca" data-icon="check" data-theme="b" data-role="button" data-mini="true" data-inline="true" class="ui-btn-right">Acerca de</a>
                 </div>   
             </div><!-- /page  -->
