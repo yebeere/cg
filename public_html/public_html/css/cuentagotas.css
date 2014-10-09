@@ -151,4 +151,12 @@ tbody tr .par {
 	font-weight: bold;
 	color: #0A0FF4;
 }
+tbody tr #nr {
+	color: #FFFFFF;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-size: large;
+	text-align: center;
+	background-color: #E91115;
+}
+
 
