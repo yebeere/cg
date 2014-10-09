@@ -50,14 +50,14 @@
                 document.getElementById('tipoRiego').innerHTML = triego[tipoRiego];
                 // adquiere los datos de la EMA seleccionada
                 // 
-                if (hayRed){ // si hay red busca losdatos en los archivos de las EMA
+                if (hayRed && !emaFS){ // si hay red busca losdatos en los archivos de las EMA
                              document.getElementById('estacionAuto').innerHTML = ema[emaSeleccionada][0];
                              buscardatosHistoricos(ema[emaSeleccionada][4]);     //obtiene los ultimos datos y mediaEva
                              ;
                     } else{
                                document.getElementById('estacionAuto').innerHTML = "No hay red - Se utilizan valores típicos";
                                //si no hay red calcular los datos de EPAN con las tablas
-                               alert("No hay red - Se utilizan valores estándar") ;
+                                window.plugins.toast.showLongCenter("No hay red - Se utilizan valores estándar") ;
                                var fechaActual = new Date();
                                var mes=fechaActual.getMonth();
                                mediaEva=epan[mes]*0.7;
@@ -74,7 +74,7 @@
           }  
           
           function publicarDatosEMA(emaSeleccionada){
-                if (hayRed) {
+                if (hayRed && !emaFS) {
                  document.getElementById('ema').innerHTML = ema[emaSeleccionada][0];
                  document.getElementById('date').innerHTML = fecha;
                  document.getElementById('hour').innerHTML = hora;

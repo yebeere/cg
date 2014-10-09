@@ -70,7 +70,13 @@ function buscardatosHistoricos(ema) {
     parserHistorico(llamar(ema));
     //var texto="d="+dia+" m="+mes+" a="+anio+" h="+ho+" mi="+mi;
    //S alert(texto);
-    comparaFecha(dia,mes,anio,ho,mi);
+    if (comparaFecha(dia,mes,anio,ho,mi)){
+        // la EMA esta dentro de las 4 hs
+        emaFS=false;
+    } else {
+        window.plugins.toast.showLongCenter("La Estación Meteorológica Automática esta Fuera de Servicio");
+        emaFS=true;
+    }
     
 
     return true;
@@ -90,7 +96,7 @@ function comparaFecha(dd,mm,aa,hh,min){
     if(difHoras<4){ 
                   //alert("paso >3");
                   return true;                 
-         } else { alert("La Estación Meteorológica Automática esta Fuera de Servicio");
+         } else {  //window.plugins.toast.showLongCenter("La Estación Meteorológica Automática esta Fuera de Servicio");
                  return false;}
       }
 
