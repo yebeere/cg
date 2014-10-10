@@ -68,8 +68,6 @@ function buscardatosHistoricos(ema) {
     //http://anterior.inta.gov.ar/altovalle/met/downld02.txt
     //parseHistorico(llamar('http://anterior.inta.gov.ar/altovalle/met/downld02.txt'));
     parserHistorico(llamar(ema));
-    //var texto="d="+dia+" m="+mes+" a="+anio+" h="+ho+" mi="+mi;
-   //S alert(texto);
     if (comparaFecha(dia,mes,anio,ho,mi)){
         // la EMA esta dentro de las 4 hs
         emaFS=false;

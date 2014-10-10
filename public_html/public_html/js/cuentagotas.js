@@ -88,11 +88,11 @@
                      document.getElementById('ema').innerHTML = ema[emaSeleccionada][0];
                      document.getElementById('date').innerHTML = "&nbsp";
                      document.getElementById('hour').innerHTML = "&nbsp";
-                     document.getElementById('temperatura').innerHTML = "s/dato ºC";
-                     document.getElementById('humedad').innerHTML = "s/dato %"; 
-                     document.getElementById('presion').innerHTML ="s/dato hPa";
-                     document.getElementById('viento').innerHTML = "s/dato km/h";
-                     document.getElementById('lluvia').innerHTML = "s/dato mm";
+                     document.getElementById('temperatura').innerHTML = "s/dato";
+                     document.getElementById('humedad').innerHTML = "s/dato"; 
+                     document.getElementById('presion').innerHTML ="s/dato";
+                     document.getElementById('viento').innerHTML = "s/dato";
+                     document.getElementById('lluvia').innerHTML = "s/dato";
                      document.getElementById('evaporacion').innerHTML = "s/dato";
                 } 
                  //document.getElementById('resultados').style.display = 'block';
