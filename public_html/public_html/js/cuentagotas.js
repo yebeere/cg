@@ -14,7 +14,7 @@
         //    alert ('Su dispositivo móvil esta en línea');
             document.getElementById('net').className = 'estado ok'; //pone el tilde verde
             //parametriza los valores del GPS
-            var options = {maximumAge: 3000, timeout: 10000, enableHighAccuracy:true};
+            var options = {maximumAge: 100, timeout: 50000, enableHighAccuracy:true};
             hayRed=true;
             //Accede a la geolocalizacion por GPS o Red
             navigator.geolocation.getCurrentPosition(onSuccessGPS, onErrorGPS, options);
